@@ -1,0 +1,43 @@
+import java.util.*;
+class Application 
+{
+    String name = "";
+    String age ="" ;
+    String mark ="";
+    void details() 
+    {
+        System.out.println("NAME : "+ name + "\n" +"AGE : " + age +"\n"+ "MARK : " + mark);
+    }
+}
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+         Scanner sc = new Scanner(System.in);
+         System.out.println("ENTER THE NUMBER OF STUDENTS TO ENTER THE DEATAILS : ");
+         int n= sc.nextInt();sc.nextLine();
+         System.out.println("ENTER THE STUDENTS DEATAILS : ");
+         System.out.println();
+         Application[] students = new Application[n];
+         for(int i=0;i<n;i++)
+         {
+             students[i]  = new Application();
+             System.out.println("ENTER THE STUDENT "+ (i+1) +" DEATAILS : ");
+             System.out.print("Name: ");
+             students[i].name = sc.nextLine();
+             System.out.print("Age: ");
+             students[i].age = sc.nextLine();
+             System.out.print("Mark: ");
+             students[i].mark= sc.nextLine();
+             System.out.println();
+         }
+         System.out.println("\nSTUDENT DETAILS:\n");
+         for(int i=0;i<n;i++)
+         {
+             System.out.println("Student " + (i + 1) + ":");
+             students[i].details();
+             System.out.println();
+         }
+        }
+        
+    }
