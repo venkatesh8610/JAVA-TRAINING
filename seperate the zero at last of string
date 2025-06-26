@@ -1,0 +1,33 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+		System.out.println("ENTER THE NUMBER OF VALUES");
+		int a = Sc.nextInt();
+        int[]data = new int[a];
+        for (int i=0; i<a; i++)
+		{
+			data[i] = Sc.nextInt();
+		}
+        Arrays.sort(data);
+        System.out.print(Arrays.toString(data));
+        System.out.println();
+        int j=0;
+        for(int i=0;i<a;i++)
+        {
+            if(data[i]!=0)
+            {
+              System.out.print(" " + data[i]);  
+            }
+            else
+            {
+              j=j+1;  
+            }
+        }
+        for(int i=0;i<j;i++)
+        {
+          System.out.print(" 0 ");  
+        }
+    
+    }
+    }
