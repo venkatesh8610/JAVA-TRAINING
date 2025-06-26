@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String [] args){
+    
+    Scanner Sc = new Scanner(System.in);
+    String a =Sc.nextLine();
+    
+    int b = a.length();
+    String c = ""; 
+    for(int i =b-1;i>=0;i-- )
+    {
+        c = c +a.charAt(i);
+    }
+    System.out.println(a.equals(c));
+}
+}
