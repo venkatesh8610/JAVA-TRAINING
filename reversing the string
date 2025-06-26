@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("Enter THE WORD ");
+        String a = Sc.nextLine();
+        String[] s= a.split(" ");
+        int n = s.length;
+        int y=0;
+        String[] r = new String[n];
+        for(int i=n-1;i>=0;i--)
+        {
+           r[y]=s[i];
+           y++;
+        }
+        for(int i=0;i<n;i++)
+        {
+          System.out.print(r[i] + " ");
+        }
+    }
+
+}
