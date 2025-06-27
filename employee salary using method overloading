@@ -9,6 +9,11 @@ class employee
     {
        System.out.println(name + " \n" + "YOUR SALARY IS  : " + sal); 
     }
+    void info(String name ,String id,int age,String number ,String dept,String group,int sal)
+    {
+        System.out.println("\n\n\n\n***************************************");
+       System.out.println("NAME : " + name + " \n" + "EMPLOYMENT ID : " + id + "\n" + "AGE : " + age + "\n" + "CONTACT NUMBER : "  + number + "\n" + "DEPARTMENT : " + dept + "\n" + "BLOOD GROUP : " + group + "\nSALARY : "+ sal); 
+    }
 }
 public class Main 
 {
@@ -18,10 +23,22 @@ public class Main
         Scanner sc = new Scanner(System.in);
         System.out.println(" ENTER YOUR NAME : ");
         String a= sc.nextLine();
-        System.out.println(" ENTER YOUR SALARY");
-        int b = sc.nextInt();
-        e.details(a);
-        e.details(a,b);
+        System.out.println(" ENTER YOUR EMP ID : ");
+        String b= sc.nextLine();
+        System.out.println(" ENTER YOUR AGE : ");
+        int c = sc.nextInt();
+        sc.nextLine();
+        System.out.println(" ENTER YOUR DEPARTMENT : ");
+        String d= sc.nextLine();
+        System.out.println(" ENTER YOUR BLOOD GROUP : ");
+        String h= sc.nextLine();
+        System.out.println(" ENTER YOUR SALARY : ");
+        int f = sc.nextInt();
+        sc.nextLine();
+        System.out.println(" ENTER YOUR CONTACT NUMBER : ");
+        String g= sc.nextLine();
+        //e.details(a);
+        e.info(a,b,c,g,d,h,f);
         
     }
 }
