@@ -1,0 +1,35 @@
+import java.util.*;
+class Car {
+    private String engineType = "petrol";
+    public int numberOfDoors = 4;
+    protected String brand = "Audi";
+    String colour = "red";
+
+    public Car() {
+        System.out.println("Car object created");
+    }
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(String engineType) {
+        this.engineType = engineType;
+    }
+
+    public void showDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Colour: " + colour);
+        System.out.println("Doors: " + numberOfDoors);
+        System.out.println("Engine: " + engineType);
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Car myCar = new Car();
+         myCar.showDetails();
+        myCar.setEngineType("diesel");
+        System.out.println("After updating engine type:");
+        myCar.showDetails();
+    }
+}
