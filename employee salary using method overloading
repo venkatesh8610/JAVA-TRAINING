@@ -1,0 +1,27 @@
+import java.util.*;
+class employee
+{
+    void details(String name)
+    {
+       System.out.println(name + " WELCOME TO OUR COMPANY"); 
+    }
+    void details(String name ,int sal)
+    {
+       System.out.println(name + " \n" + "YOUR SALARY IS  : " + sal); 
+    }
+}
+public class Main 
+{
+    public static void main(String[] args)
+    {
+        employee e = new employee();
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" ENTER YOUR NAME : ");
+        String a= sc.nextLine();
+        System.out.println(" ENTER YOUR SALARY");
+        int b = sc.nextInt();
+        e.details(a);
+        e.details(a,b);
+        
+    }
+}
