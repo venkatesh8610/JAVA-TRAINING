@@ -1,0 +1,58 @@
+import java.util.*;
+class Car {
+    private String engineType = "petrol";
+    public int numberOfDoors = 4;
+    protected String brand = "Audi";
+    String colour = "red";
+
+    public Car() {
+        System.out.println("Car object created");
+    }
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(String engineType) {
+        this.engineType = engineType;
+    }
+    public void setbrand(String brand) {
+        this.brand = brand;
+    }
+    public void setcolour(String colour) {
+        this.colour = colour;
+    }
+    public void setnumberOfDoors(int numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
+    }
+    public void showDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Colour: " + colour);
+        System.out.println("Doors: " + numberOfDoors);
+        System.out.println("Engine: " + engineType);
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Car myCar = new Car();
+        myCar.showDetails();
+        System.out.println(" ENTER YOUR UPDATED CAR BRAND : ");
+        String a= sc.nextLine();
+        System.out.println(" ENTER YOUR UPDATED CAR COLOUR : ");
+        String b= sc.nextLine();
+        System.out.println(" ENTER YOUR UPDATED NO. OF CAR DOORS : ");
+        int c= sc.nextInt();
+        sc.nextLine();
+        System.out.println(" ENTER YOUR UPDATED CAR ENGINE TYPE : ");
+        String d= sc.nextLine();
+        myCar.showDetails();
+        myCar.setEngineType(d);
+        myCar.setnumberOfDoors(c);
+        myCar.setbrand(a);
+        myCar.setcolour(b);
+        System.out.println("After updating engine type:");
+        myCar.showDetails();
+    }
+}
