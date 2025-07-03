@@ -1,0 +1,53 @@
+
+import java.util.*;
+import java.util.Scanner;
+class Main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Array Size : ");
+		int a=sc.nextInt();
+		int d=0;
+		if(a>1&&a<10)
+		{
+		    int[] b= new int[a];
+		    System.out.println("Enter Array Elements : ");
+		    for(int i=0;i<a;i++)
+		    {
+		        b[i]=sc.nextInt();
+		    }
+		    System.out.println("Array  Elements are : ");
+		    for(int i=0;i<a;i++)
+		    {
+		        System.out.print(b[i] + " ");
+		    }
+		    System.out.println();
+		    System.out.println("Alternative even  Elements are : ");
+		    for(int i=0;i<a;i++)
+		    {
+		        if(b[i]%2==0)
+		        {
+		            d++;
+		            if(d%2>0)
+		            {
+		               System.out.print(b[i]+" ");
+		            }
+		        }
+		        else
+		        {
+		            continue;
+		        }
+		    }
+		    if(d==0)
+		    {
+		        System.out.print("No even numbers in the give Array!");
+		    }
+		
+		}
+		else
+		{
+		    System.out.print("Invalid Array Size.");
+		}
+	}
+}
